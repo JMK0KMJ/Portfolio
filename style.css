@@ -122,14 +122,16 @@ body:has(.gallery){
   max-width:1060px;
 }
 
+/* columnas de hasta 3 (mínimo ~300px cada una); cada obra conserva su proporción */
 .gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  gap:20px;
+  columns:300px 3;
+  column-gap:20px;
 }
 
 .card{
   display:block;
+  margin-bottom:20px;
+  break-inside:avoid;
   border:1px solid var(--border);
   background:var(--panel);
   text-decoration:none;
@@ -144,8 +146,7 @@ body:has(.gallery){
 .card img{
   display:block;
   width:100%;
-  aspect-ratio:4/5;
-  object-fit:cover; /* cambiá a "contain" si preferís ver la obra entera sin recorte */
+  height:auto; /* muestra el dibujo completo, sin recortes */
 }
 
 .card-label{
