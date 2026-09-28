@@ -122,16 +122,15 @@ body:has(.gallery){
   max-width:1060px;
 }
 
-/* columnas de hasta 3 (mínimo ~300px cada una); cada obra conserva su proporción */
+/* grilla de tarjetas del mismo tamaño; cada dibujo se escala para entrar entero */
 .gallery{
-  columns:300px 3;
-  column-gap:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap:20px;
 }
 
 .card{
   display:block;
-  margin-bottom:20px;
-  break-inside:avoid;
   border:1px solid var(--border);
   background:var(--panel);
   text-decoration:none;
@@ -146,7 +145,10 @@ body:has(.gallery){
 .card img{
   display:block;
   width:100%;
-  height:auto; /* muestra el dibujo completo, sin recortes */
+  aspect-ratio:4/5;      /* mismo alto para todas las tarjetas */
+  object-fit:contain;    /* el dibujo entra completo, sin recorte */
+  padding:10px;
+  background:var(--bg);
 }
 
 .card-label{
