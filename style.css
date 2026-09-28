@@ -110,10 +110,22 @@ nav.window a:focus-visible .cursor{
   color:var(--text);
 }
 
+/* ---------- Portfolio (páginas que tienen una .gallery) ---------- */
+
+/* arriba en vez de centrado vertical, para que crezca hacia abajo */
+body:has(.gallery){
+  align-items:flex-start;
+}
+
+/* marco más ancho: 3 columnas de ~340px */
+.frame:has(.gallery){
+  max-width:1060px;
+}
+
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
-  gap:10px;
+  grid-template-columns:repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap:20px;
 }
 
 .card{
@@ -132,14 +144,78 @@ nav.window a:focus-visible .cursor{
 .card img{
   display:block;
   width:100%;
-  aspect-ratio:1/1;
-  object-fit:cover;
+  aspect-ratio:4/5;
+  object-fit:cover; /* cambiá a "contain" si preferís ver la obra entera sin recorte */
 }
 
 .card-label{
   display:block;
-  padding:8px 10px;
-  font-size:0.78rem;
+  padding:10px 12px;
+  font-size:0.82rem;
   color:var(--text-dim);
   border-top:1px solid var(--border-dim);
+}
+
+/* ---------- Visor de imagen (lightbox) ---------- */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:24px;
+  padding-top:calc(24px + env(safe-area-inset-top, 0px));
+  padding-bottom:calc(24px + env(safe-area-inset-bottom, 0px));
+  background:rgba(14,10,18,0.94);
+}
+
+.lightbox.open{
+  display:flex;
+}
+
+.lightbox img{
+  max-width:100%;
+  max-height:calc(100vh - 140px);
+  max-height:calc(100dvh - 140px);
+  object-fit:contain;
+  border:1px solid var(--border);
+  background:var(--panel);
+}
+
+.lightbox-bar{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  font-size:0.8rem;
+  color:var(--text-dim);
+}
+
+.lightbox-bar a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+.lightbox-bar a:hover{
+  color:var(--text);
+}
+
+.lightbox-close{
+  position:absolute;
+  top:calc(16px + env(safe-area-inset-top, 0px));
+  right:16px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  color:var(--text);
+  font:inherit;
+  font-size:0.8rem;
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+.lightbox-close:hover{
+  border-color:var(--accent);
 }
