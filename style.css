@@ -109,3 +109,37 @@ nav.window a:focus-visible .cursor{
 .back:hover{
   color:var(--text);
 }
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+  gap:10px;
+}
+
+.card{
+  display:block;
+  border:1px solid var(--border);
+  background:var(--panel);
+  text-decoration:none;
+  overflow:hidden;
+  transition:border-color 0.12s ease;
+}
+
+.card:hover{
+  border-color:var(--accent);
+}
+
+.card img{
+  display:block;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
+
+.card-label{
+  display:block;
+  padding:8px 10px;
+  font-size:0.78rem;
+  color:var(--text-dim);
+  border-top:1px solid var(--border-dim);
+}
