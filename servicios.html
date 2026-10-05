@@ -3,23 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Javier — Arte y diseño</title>
+<title>Servicios — Javier Kulemeyer</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="page">
-    <div class="frame">
+    <div class="frame frame-wide">
       <header class="name-plate">
-        <h1>Javier Kulemeyer</h1>
-        <p data-i18n="subtitle">Profesor de arte — ilustración, diseño, herramientas digitales, emprendedor en JK Corte Láser</p>
+        <h1 data-i18n="serviciosTitle">Servicios</h1>
+        <p data-i18n="serviciosSubtitle">Trabajos que ofrezco</p>
       </header>
-      <nav class="window">
-        <ul>
-          <li><a href="portfolio.html"><span class="cursor">▸</span><span data-i18n="navPortfolio">Portfolio</span></a></li>
-          <li><a href="cursos.html"><span class="cursor">▸</span><span data-i18n="navCursos">Cursos</span></a></li>
-          <li><a href="servicios.html"><span class="cursor">▸</span><span data-i18n="navServicios">Servicios</span></a></li>
-        </ul>
-      </nav>
+
+      <div class="service-list">
+        <article class="service">
+          <h2>Diseño gráfico</h2>
+          <p>Flyers, logos, identidad visual y piezas para redes.</p>
+        </article>
+
+        <article class="service">
+          <h2>Edición de video</h2>
+          <p>Montaje, color y armado de video para redes o presentaciones.</p>
+        </article>
+
+        <!-- Para agregar otro servicio, copiá el bloque de arriba
+             (de <article> a </article>) y cambiá el título y la descripción -->
+      </div>
+
+      <a class="back" href="index.html" data-i18n="back">◂ volver al menú</a>
     </div>
   </div>
 

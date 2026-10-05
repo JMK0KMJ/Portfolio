@@ -9,6 +9,12 @@
       footerPhrase: "Este sitio está hecho con muy poco conocimiento sobre código, algo de inteligencia natural y bastante inteligencia artificial.",
       portfolioTitle: "Portfolio",
       portfolioSubtitle: "Trabajos, ilustración y proyectos",
+      navServicios: "Servicios",
+      cursosTitle: "Cursos",
+      cursosSubtitle: "Talleres y clases disponibles",
+      serviciosTitle: "Servicios",
+      serviciosSubtitle: "Trabajos que ofrezco",
+      wspButton: "Consultar por WhatsApp",
       back: "◂ volver al menú"
     },
     en: {
@@ -18,6 +24,12 @@
       footerPhrase: "This site is made with very little coding knowledge, some natural intelligence and quite a bit of artificial intelligence.",
       portfolioTitle: "Portfolio",
       portfolioSubtitle: "Work, illustration and projects",
+      navServicios: "Services",
+      cursosTitle: "Courses",
+      cursosSubtitle: "Available workshops and classes",
+      serviciosTitle: "Services",
+      serviciosSubtitle: "What I offer",
+      wspButton: "Contact via WhatsApp",
       back: "◂ back to menu"
     },
     de: {
@@ -27,6 +39,12 @@
       footerPhrase: "Diese Seite wurde mit sehr wenig Programmierkenntnissen, etwas natürlicher Intelligenz und ziemlich viel künstlicher Intelligenz erstellt.",
       portfolioTitle: "Portfolio",
       portfolioSubtitle: "Arbeiten, Illustration und Projekte",
+      navServicios: "Leistungen",
+      cursosTitle: "Kurse",
+      cursosSubtitle: "Verfügbare Workshops und Kurse",
+      serviciosTitle: "Leistungen",
+      serviciosSubtitle: "Was ich anbiete",
+      wspButton: "Per WhatsApp anfragen",
       back: "◂ zurück zum Menü"
     }
   };
