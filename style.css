@@ -20,9 +20,21 @@ html,body{
 
 body{
   display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  min-height:100dvh;
+  padding:24px;
+  padding-top:calc(24px + env(safe-area-inset-top, 0px));
+  padding-bottom:calc(24px + env(safe-area-inset-bottom, 0px));
+}
+
+/* envuelve el contenido principal de cada página (menú, portfolio, cursos);
+   ocupa todo el espacio libre, así el footer queda siempre al pie */
+.page{
+  flex:1;
+  display:flex;
   align-items:center;
   justify-content:center;
-  padding:24px;
 }
 
 .frame{
@@ -98,47 +110,59 @@ nav.window a:focus-visible .cursor{
   opacity:1;
 }
 
+/* pie de página: frase y botones de idioma, siempre al fondo */
+.site-footer{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  margin-top:24px;
+}
+
 .lang-box{
-  border:1px solid var(--border);
+  width:100%;
+  max-width:640px;
+  border:1px solid var(--border-dim);
   background:var(--panel);
-  margin-top:14px;
-  padding:16px 22px;
+  padding:10px 18px;
   text-align:center;
 }
 
 .lang-phrase{
-  margin:0 0 12px;
-  font-size:0.75rem;
+  margin:0;
+  font-size:0.68rem;
   color:var(--text-dim);
   line-height:1.5;
 }
 
 .lang-buttons{
   display:flex;
-  justify-content:center;
-  gap:8px;
+  gap:6px;
+  border:1px solid var(--border-dim);
+  background:var(--panel);
+  padding:6px;
 }
 
 .lang-buttons button{
   font:inherit;
-  font-size:0.78rem;
+  font-size:0.72rem;
   color:var(--text-dim);
   background:transparent;
-  border:1px solid var(--border-dim);
-  padding:6px 14px;
+  border:1px solid transparent;
+  padding:4px 12px;
   cursor:pointer;
   transition:border-color 0.12s ease, color 0.12s ease;
 }
 
 .lang-buttons button:hover{
   color:var(--text);
-  border-color:var(--accent);
+  border-color:var(--border);
 }
 
 .lang-buttons button.active{
   color:var(--bg);
   background:var(--accent);
-  border-color:var(--accent);
 }
 
 .back{
@@ -156,7 +180,7 @@ nav.window a:focus-visible .cursor{
 /* ---------- Portfolio (páginas que tienen una .gallery) ---------- */
 
 /* arriba en vez de centrado vertical, para que crezca hacia abajo */
-body:has(.gallery){
+.page:has(.gallery){
   align-items:flex-start;
 }
 
