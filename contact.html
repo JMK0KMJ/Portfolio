@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Javier Kulemeyer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #111;
+      color: #fff;
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .volver {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #b8a6d9;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .volver:hover {
+      color: #fff;
+    }
+
+    .contacto {
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid #6b5b7b;
+      background: #1a1720;
+      padding: 40px 30px;
+    }
+
+    .foto {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border: 2px solid #6b5b7b;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .descripcion {
+      color: #bdbdbd;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .opciones {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .opciones a {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #6b5b7b;
+      padding: 12px;
+      transition: background 0.2s;
+    }
+
+    .opciones a:hover {
+      background: #3a3345;
+    }
+
+    .redes {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .redes a {
+      color: #fff;
+      font-size: 1.8rem;
+      transition: color 0.2s;
+    }
+
+    .redes a:hover {
+      color: #b8a6d9;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="volver">← Volver</a>
+
+  <main class="contacto">
+    <img src="assets/foto.jpg" alt="Foto de Javier Kulemeyer" class="foto">
+
+    <h1>Javier Kulemeyer</h1>
+    <p class="descripcion">aca va la descripcion</p>
+
+    <div class="opciones">
+      <a href="aca va el link1" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="mailto:aca va el link2">
+        <i class="fa-solid fa-envelope"></i> Email
+      </a>
+    </div>
+
+    <div class="redes">
+      <a href="aca va el link3" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="aca va el link4" target="_blank" rel="noopener" aria-label="Behance">
+        <i class="fa-brands fa-behance"></i>
+      </a>
+      <a href="aca va el link5" target="_blank" rel="noopener" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>
